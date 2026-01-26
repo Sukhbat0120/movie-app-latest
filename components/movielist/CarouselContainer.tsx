@@ -14,7 +14,7 @@ import {
 type Props = {
   movies: MovieType[];
 };
-export const CarouselContainer = ({ movies }: Props) => {
+export const CarouselContainer = ({ movies  }: Props) => {
   return (
     <Carousel
       opts={{ loop: true }}
@@ -24,7 +24,7 @@ export const CarouselContainer = ({ movies }: Props) => {
         }),
       ]}
     >
-      <CarouselContent className="w-full h-[700px]">
+      <CarouselContent className="w-full h-[800px]">
         {movies?.slice(0, 10).map((movie) => (
           <CarouselItem
             key={movie.id}
@@ -42,6 +42,7 @@ export const CarouselContainer = ({ movies }: Props) => {
                 texth2="Now Playing:"
                 textp={movie.overview}
                 vo={movie.vote_average}
+                trailerUrl={movie.trailerUrl}
               />
             </div>
           </CarouselItem> 
