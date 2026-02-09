@@ -13,11 +13,12 @@ export type MovieType = {
   vote_average: number;
   vote_count: number;
   isLoading: boolean;
-  trailerUrl:string ; 
+  trailerUrl: string;
 };
 export type GenreType = {
   text: string;
   id: number;
+  name: string;
 };
 export type MovieDetailProps = {
   movie: MovieType;
