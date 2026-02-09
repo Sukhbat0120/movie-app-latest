@@ -3,7 +3,7 @@ import { Navigation } from "@/components/navbar/Navigation";
 import { getMovies } from "@/lib/api/getMovies";
 import { CarouselContainer } from "@/components/movielist/CarouselContainer";
 import { getGenreList } from "@/lib/api/getGenresList";
-import { Loader } from "@/components/Loader";
+
 import { Footer } from "@/components/footer/Footer";
 async function Home() {
   const nowplayingMovieData = await getMovies("now_playing");
@@ -36,7 +36,7 @@ async function Home() {
         movies={top_ratedMovieData}
         category="now_playing"
       />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

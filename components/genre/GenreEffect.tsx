@@ -1,6 +1,5 @@
 import { MovieCard } from "../movielist/MovieCard";
 import { MovieType } from "@/lib/types";
-import { movieGenres } from "@/lib/utils";
 import { GenreList } from "./GenreList";
 type Props = {
   genreName: string;

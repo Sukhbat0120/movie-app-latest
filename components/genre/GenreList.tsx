@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { GenreType } from "@/lib/types";
 import Link from "next/link";
@@ -31,7 +31,7 @@ export const GenreList = () => {
             <div className="pb-2">
               <button className="border border-gray-200 hover:bg-gray-300 flex gap-0.5 justify-center px-1.5 rounded-lg text-black font-semibold">
                 <p>{genre.name}</p>
-                <img src="/chevron-right.svg" alt="" />
+                <Image src="/chevron-right.svg" alt="" />
               </button>
             </div>
           </Link>

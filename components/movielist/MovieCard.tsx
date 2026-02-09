@@ -2,10 +2,9 @@
 import { MovieType } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
-import { useState } from "react";
-import { Star } from "lucide-react";
+
 import StarIcon from "../StarIcon";
+import Image from "next/image";
 interface Props {
   movie: MovieType;
   containercss: string;
@@ -13,13 +12,9 @@ interface Props {
 }
 export const MovieCard = ({ movie, containercss, imgclassname }: Props) => {
   const { title, vote_average, poster_path, id } = movie;
-  const [star, setStar] = useState(false);
+
   console.log(movie);
 
-  const HandlChangeStar = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setStar(!star);
-  };
   const router = useRouter();
   const HandleClick = () => {
     router.push(`/detail/${id}`);
@@ -29,10 +24,10 @@ export const MovieCard = ({ movie, containercss, imgclassname }: Props) => {
       onClick={HandleClick}
       className={cn(
         "overflow-hidden rounded-2xl hover:shadow-2xl  duration-100",
-        containercss
+        containercss,
       )}
     >
-      <img
+      <Image
         src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
         alt={`Poster of ${title}`}
         className={cn(imgclassname)}

@@ -1,6 +1,6 @@
 import { MovieDetailProps } from "@/lib/types";
 import { TrailerModals } from "../movielist/TrailerModal";
-
+import Image from "next/image";
 export const MovieDetail = ({
   movie,
   credits,
@@ -16,7 +16,7 @@ export const MovieDetail = ({
         <div className="text-right">
           <h2 className="font-semibold text-black">Rating</h2>
           <div className="flex items-center gap-1">
-            <img src="/star.svg" alt="star" />
+            <Image src="/star.svg" alt="star" width={5} height={5} />
             <p className="text-black">
               <span>{movie.vote_average}</span>/10
             </p>

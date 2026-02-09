@@ -13,6 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Navigation = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -28,7 +29,7 @@ export const Navigation = () => {
     <nav className="mt-5 w-full h-[52px] rounded-lg flex border shadow-lg justify-center items-center">
       <div className="w-full flex justify-around items-center">
         <Link href="/" className="flex items-center gap-3">
-          <img src="/film.svg" alt="Logo" className="w-8 h-8" />
+          <Image src="/film.svg" alt="Logo" width={32} height={32} />
           <h2 className="text-indigo-700 text-lg font-bold">Movie Z</h2>
         </Link>
 

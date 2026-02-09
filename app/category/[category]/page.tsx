@@ -1,5 +1,6 @@
 import { getMovies } from "@/lib/api/getMovies";
 import { MovieCard } from "@/components/movielist/MovieCard";
+import { MovieType } from "@/lib/types";
 
 type Props = {
   params: { category: string };
@@ -15,7 +16,7 @@ export default async function CategoryPage({ params }: Props) {
       </h1> */}
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        {movies.results.map((movie: any) => (
+        {movies.results.map((movie: MovieType) => (
           <MovieCard
             key={movie.id}
             movie={movie}

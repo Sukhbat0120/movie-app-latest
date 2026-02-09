@@ -1,4 +1,3 @@
-import { getSimilarMovie } from "@/lib/api/getSimilarMovies";
 import { MovieCard } from "../movielist/MovieCard";
 import { MovieType } from "@/lib/types";
 
