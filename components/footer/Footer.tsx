@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export const Footer = () => {
   return (
     <div className="flex  h-[280px] w-full items-center bg-indigo-700 py-[40px] ">

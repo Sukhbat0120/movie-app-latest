@@ -1,5 +1,5 @@
 import { TrailerModals } from "./TrailerModal";
-import Image from "next/image";
+
 type Texttype = {
   texth2: string;
   texth1: string;
