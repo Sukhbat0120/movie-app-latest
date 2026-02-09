@@ -21,7 +21,7 @@ export const DescriptionBox = ({
         <h2 className="p-2 text-base ">{texth2}</h2>
         <h1 className="text-4xl">{texth1}</h1>
         <div className="flex p-2 gap-2">
-          <Image src="/star.svg" alt="" />
+          <img src="/star.svg" alt="" />
           <p>
             <span>{vo}</span>/10
           </p>

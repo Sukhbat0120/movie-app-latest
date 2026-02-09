@@ -30,6 +30,8 @@ export const MovieCard = ({ movie, containercss, imgclassname }: Props) => {
       <Image
         src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
         alt={`Poster of ${title}`}
+        width={40}
+        height={240}
         className={cn(imgclassname)}
       />
       <div className="bg-gray-300 h-50 p-2 ">

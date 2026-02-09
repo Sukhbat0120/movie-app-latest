@@ -3,8 +3,11 @@ import { MovieType } from "@/lib/types";
 import { GenreList } from "./GenreList";
 type Props = {
   genreName: string;
-  movies: MovieType[];
+  movies: {
+    results: MovieType[];
+  };
 };
+
 export const GenreEffect = ({ genreName, movies }: Props) => {
   return (
     <div className="mt-20 w-full ">
