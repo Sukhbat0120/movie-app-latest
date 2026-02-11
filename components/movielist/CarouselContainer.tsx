@@ -14,7 +14,8 @@ import {
 type Props = {
   movies: MovieType[];
 };
-export const CarouselContainer = ({ movies  }: Props) => {
+
+export const CarouselContainer = ({ movies }: Props) => {
   return (
     <Carousel
       opts={{ loop: true }}
@@ -25,7 +26,7 @@ export const CarouselContainer = ({ movies  }: Props) => {
       ]}
     >
       <CarouselContent className="w-full h-[800px]">
-        {movies?.slice(0, 10).map((movie) => (
+        {movies.slice(0, 10).map((movie) => (
           <CarouselItem
             key={movie.id}
             style={{
@@ -35,7 +36,7 @@ export const CarouselContainer = ({ movies  }: Props) => {
             }}
             className="relative text-white flex items-center justify-center"
           >
-            <div className="absolute inset-0 bg-black/50"></div>
+            <div className="absolute inset-0 bg-black/50" />
             <div className="relative z-10">
               <DescriptionBox
                 texth1={movie.title}
@@ -45,17 +46,12 @@ export const CarouselContainer = ({ movies  }: Props) => {
                 trailerUrl={movie.trailerUrl}
               />
             </div>
-          </CarouselItem> 
+          </CarouselItem>
         ))}
       </CarouselContent>
 
-      <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-md">
-        Prev
-      </CarouselPrevious>
-
-      <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-md">
-        Next
-      </CarouselNext>
+      <CarouselPrevious />
+      <CarouselNext />
     </Carousel>
   );
 };

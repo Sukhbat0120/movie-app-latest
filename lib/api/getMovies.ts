@@ -5,9 +5,10 @@ type MovieResponse = {
   results: MovieType[];
 };
 
-export const getMovies = async (category: string): Promise<MovieResponse> => {
+export const getMovies = async (category: string): Promise<MovieType[]> => {
   const response = await axiosInstance.get<MovieResponse>(
     `/movie/${category}?language=en-US`,
   );
-  return response.data;
+
+  return response.data.results;
 };
