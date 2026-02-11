@@ -1,18 +1,22 @@
 import { getMovies } from "@/lib/api/getMovies";
 import { MovieCard } from "@/components/movielist/MovieCard";
+import { MovieType } from "@/lib/types";
 
-export default async function CategoryPage({
-  params,
-}: {
-  params: { category: string };
-}) {
+type Props = {
+  params: {
+    category: string;
+  };
+};
+
+export default async function CategoryPage({ params }: Props) {
   const { category } = params;
-  const movies = await getMovies(category);
+
+  const movies: MovieType[] = await getMovies(category);
 
   return (
     <main className="px-6 py-10">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        {movies.results.map((movie) => (
+        {movies.map((movie) => (
           <MovieCard
             key={movie.id}
             movie={movie}
