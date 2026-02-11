@@ -2,12 +2,14 @@ import { getMovies } from "@/lib/api/getMovies";
 import { MovieCard } from "@/components/movielist/MovieCard";
 import { MovieType } from "@/lib/types";
 
-export default async function CategoryPage({
-  params,
-}: {
-  params: Promise<{ category: string }>;
-}) {
-  const { category } = await params;
+type Props = {
+  params: {
+    category: string;
+  };
+};
+
+export default async function CategoryPage({ params }: Props) {
+  const { category } = params;
 
   const movies: MovieType[] = await getMovies(category);
 
